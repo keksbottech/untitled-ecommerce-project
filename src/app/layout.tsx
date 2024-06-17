@@ -1,8 +1,13 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
+import Script from "next/script";
 
-const inter = Inter({ subsets: ["latin"] });
+
+const plus_jarkarta_sans = Plus_Jakarta_Sans({
+  subsets: ['latin'],
+  weight: ["200", "300", "400", "500", "600", "700", "800"]
+})
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -16,7 +21,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <Script src="https://kit.fontawesome.com/20b8edb75e.js" ></Script>
+      <body className={plus_jarkarta_sans.className}>{children}</body>
     </html>
   );
 }
