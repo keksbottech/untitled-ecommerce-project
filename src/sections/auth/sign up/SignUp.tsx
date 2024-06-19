@@ -20,7 +20,7 @@ const SignUp = () => {
                 <span className='font-bold'>Create your account</span>
                 <p className="font-light text-sm text-gray-500 mt-1">Welcome! Please fill in the details to get started</p>
                 <div className="">
-                    <Button onClick={enableGoogleAuth} updateStyle={'px-10 my-5 flex items-center justify-center'}>
+                    <Button variant={'outline'} onClick={enableGoogleAuth} className={'px-10 my-5 flex items-center justify-center'}>
                         <div className='flex items-center'>
                             <Image src={"/google/google.png"} width={40} height={40} alt="google btn" />
                             <span>Google</span>
