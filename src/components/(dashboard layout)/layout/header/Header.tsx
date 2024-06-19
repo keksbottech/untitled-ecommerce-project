@@ -35,8 +35,6 @@ const Header = ({ toggleMobileSidebar }: ItemType) => {
 
   const toggleNotifcation = () => {
     setIsBtnClicked(!isBtnClicked)
-
-    console.log('xll')
   }
   return (
     <AppBarStyled position="sticky" color="default">
@@ -63,8 +61,8 @@ const Header = ({ toggleMobileSidebar }: ItemType) => {
           aria-controls="msgs-menu"
           aria-haspopup="true"
         >
-          <Badge variant="dot" color="primary">
-            <IconBellRinging size="21" onClick={toggleNotifcation} stroke="1.5" />
+          <Badge variant="dot" onClick={toggleNotifcation} color="primary">
+            <IconBellRinging size="21" stroke="1.5" />
           </Badge>
 
         </IconButton>

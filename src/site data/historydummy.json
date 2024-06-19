@@ -1,0 +1,42 @@
+[
+  {
+    "id": 0,
+    "productName": "hand bag",
+    "image": "/images/products/s11.jpg",
+    "date": "14th December, 2024. 9:00:00",
+    "description": "Joe doe just purchased this product",
+    "price": "$90.99"
+  },
+  {
+    "id": 1,
+    "productName": "hand bag",
+    "image": "/images/products/s7.jpg",
+    "date": "14th December, 2024. 9:00:00",
+    "description": "Joe doe just purchased this product",
+    "price": "$90.99"
+  },
+  {
+    "id": 2,
+    "productName": "hand bag",
+    "image": "/images/products/s5.jpg",
+    "date": "14th December, 2024. 9:00:00",
+    "description": "Joe doe just purchased this product",
+    "price": "$90.99"
+  },
+  {
+    "id": 3,
+    "productName": "hand bag",
+    "image": "/images/products/s5.jpg",
+    "date": "14th December, 2024. 9:00:00",
+    "description": "Joe doe just purchased this product",
+    "price": "$90.99"
+  },
+  {
+    "id": 4,
+    "productName": "hand bag",
+    "image": "/images/products/s7.jpg",
+    "date": "14th December, 2024. 9:00:00",
+    "description": "Joe doe just purchased this product",
+    "price": "$90.99"
+  }
+]

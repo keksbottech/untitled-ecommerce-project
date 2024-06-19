@@ -1,6 +1,6 @@
 'use client'
-import Button from '@/components/button/Button'
-import Input from '@/components/input/Input'
+import { Button } from '@/components/ui/button'
+import { Input } from '@/components/ui/input'
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
@@ -20,7 +20,7 @@ const SignIn = () => {
                 <span className='font-bold'>Sign in to Title</span>
                 <p className="font-light text-sm mt-1 text-gray-500">Welcome! Please sign in to continue</p>
                 <div className="">
-                    <Button onClick={enableGoogleAuth} updateStyle={'px-10 my-5 flex items-center justify-center'}>
+                    <Button variant={'outline'} onClick={enableGoogleAuth} className={'px-10 my-5 flex items-center justify-center'}>
                         <div className='flex items-center'>
                             <Image src={"/google/google.png"} width={40} height={40} alt="google btn" />
                             <span>Google</span>
@@ -41,18 +41,18 @@ const SignIn = () => {
                         <div className='flex flex-col w-full'>
                             <label className='my-2 text-sm  font-semibold' htmlFor="email">Email address</label>
                             <Input type="text"
-                                id="email" onChange={undefined} value={''} updateStyle={'my-2 w-full'} placeholder={''} /></div>
+                                id="email" onChange={undefined} value={''} className={'my-2 w-full'} placeholder={''} /></div>
                         <div className='flex flex-col'>
                             <label className='my-2 text-sm font-semibold' htmlFor="password">
                                 Password
                             </label>
                             <div className='relative w-full'>
                                 <Input type="text"
-                                    id="password" onChange={undefined} value={''} updateStyle={'my-2 w-full'} placeholder={''} />
+                                    id="password" onChange={undefined} value={''} className={'my-2 w-full'} placeholder={''} />
                                 <i className="fa fa-eye absolute right-5 top-5" aria-hidden="true"></i>
                             </div>
                         </div>
-                        <Button onClick={signInUserThroughEmailAndPassword} updateStyle='bg-[#7D76F3] w-full my-5 text-white text-sm'>
+                        <Button onClick={signInUserThroughEmailAndPassword} className='bg-[#7D76F3] w-full my-5 text-white text-sm'>
                             <span>Continue</span>
                         </Button>
                     </div>

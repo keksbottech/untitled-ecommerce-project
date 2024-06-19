@@ -15,14 +15,14 @@ type CustomerPropsTypes = {
 const Customer = ({ isCheckBoxClicked, name, email, location, phone, imageUrl, alt }: CustomerPropsTypes) => {
     return (
         <TableRow>
-            <TableCell className='capitalize ml-3 font-medium p-6'> <Checkbox /></TableCell>
-            <TableCell className="font-medium p-6 flex flex-col items-center justify-center">
+            <TableCell className='capitalize font-medium p-6 '> <Checkbox /></TableCell>
+            <TableCell className="font-medium p-6  flex flex-col  w-[150px]">
                 <Image src={imageUrl} alt={alt} width={50} height={50} className="rounded-full" />
                 <p className="capitalize mt-3">{name}</p>
             </TableCell>
-            <TableCell className='p-6'>{email}</TableCell>
-            <TableCell className="p-6">{location}</TableCell>
-            <TableCell className="p-6">{phone}</TableCell>
+            <TableCell className='p-6  w-[150px]'>{email}</TableCell>
+            <TableCell className="p-6 w-[150px]">{location}</TableCell>
+            <TableCell className="p-6 ">{phone}</TableCell>
         </TableRow>
     )
 }

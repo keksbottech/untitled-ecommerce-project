@@ -34,11 +34,11 @@ const Account = () => {
                     <form>
                         <div className="flex flex-col xl:flex-row my-3">
                             <Input className='p-5 py-7 mr-3' placeholder='First name*' />
-                            <Input className='p-5 py-7 mr-3' placeholder='Last name*' />
+                            <Input className='p-5 py-7 mr-3 mt-3 xl:mt-0' placeholder='Last name*' />
                         </div>
                         <div className="flex flex-col xl:flex-row my-3">
                             <Input className='p-5 py-7 mr-3' placeholder='Email Address*' />
-                            <Input className='p-5 py-7 mr-3' placeholder='Phone number' />
+                            <Input className='p-5 py-7 mr-3 mt-3 xl:mt-0' placeholder='Phone number' />
                         </div>
                         <div className="flex flex-col xl:flex-row my-3">
                             <Select >
@@ -56,7 +56,7 @@ const Account = () => {
                                     </SelectGroup>
                                 </SelectContent>
                             </Select>
-                            <Input className='p-5 py-7 mr-3' placeholder='City' />
+                            <Input className='p-5 py-7 mr-3 mt-3 xl:mt-0' placeholder='City' />
                         </div>
                     </form>
                 </CardContent>

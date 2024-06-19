@@ -93,7 +93,7 @@ const Sidebar = ({
       {/* ------------------------------------------- */}
       {/* Sidebar For Mobile */}
       {/* ------------------------------------------- */}
-      <SidebarItems />
+      <SidebarItems onSidebarClose={onSidebarClose} />
       <Upgrade />
     </Drawer>
   );

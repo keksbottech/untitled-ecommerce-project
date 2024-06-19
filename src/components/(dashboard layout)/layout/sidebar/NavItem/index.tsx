@@ -28,9 +28,10 @@ interface ItemType {
   hideMenu?: any;
   level?: number | any;
   pathDirect: string;
+  onSidebarClose: (arg1: boolean) => void
 }
 
-const NavItem = ({ item, level, pathDirect, onClick }: ItemType) => {
+const NavItem = ({ item, level, pathDirect, onClick, onSidebarClose }: ItemType) => {
   const Icon = item.icon;
   const theme = useTheme();
   const itemIcon = <Icon stroke={1.5} size="1.3rem" />;
@@ -61,7 +62,10 @@ const NavItem = ({ item, level, pathDirect, onClick }: ItemType) => {
   }));
 
   return (
-    <List component="div" disablePadding key={item.id}>
+    <List onClick={(event: any) => {
+      onSidebarClose(true)
+      // onClick(event)
+    }} component="div" disablePadding key={item.id} >
       <ListItemStyled>
         <ListItemButton
           component={Link}
@@ -85,7 +89,7 @@ const NavItem = ({ item, level, pathDirect, onClick }: ItemType) => {
           </ListItemText>
         </ListItemButton>
       </ListItemStyled>
-    </List>
+    </List >
   );
 };
 

@@ -5,10 +5,12 @@ import { Box, List } from "@mui/material";
 import NavItem from "./NavItem";
 import NavGroup from "./NavGroup/NavGroup";
 
-const SidebarItems = ({ toggleMobileSidebar }: any) => {
+const SidebarItems = ({ toggleMobileSidebar, onSidebarClose }: any) => {
   const pathname = usePathname();
   const pathDirect = pathname;
-  
+  console.log(toggleMobileSidebar);
+
+
   return (
     <Box sx={{ px: 3 }}>
       <List sx={{ pt: 0 }} className="sidebarNav" component="div">
@@ -26,6 +28,7 @@ const SidebarItems = ({ toggleMobileSidebar }: any) => {
                 key={item.id}
                 pathDirect={pathDirect}
                 onClick={toggleMobileSidebar}
+                onSidebarClose={onSidebarClose}
               />
             );
           }

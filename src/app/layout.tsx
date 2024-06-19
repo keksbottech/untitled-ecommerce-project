@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
-import Script from "next/script";
 
 
 const plus_jarkarta_sans = Plus_Jakarta_Sans({
@@ -20,9 +19,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <Script src="https://kit.fontawesome.com/20b8edb75e.js" ></Script>
-      <body className={plus_jarkarta_sans.className}>{children}</body>
+    <html lang="en" >
+      <body cz-shortcut-listen={''} className={plus_jarkarta_sans.className}>{children}</body>
     </html>
   );
 }
