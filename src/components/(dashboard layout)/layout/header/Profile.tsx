@@ -67,23 +67,23 @@ const Profile = () => {
           <ListItemIcon>
             <IconUser width={20} />
           </ListItemIcon>
-          <ListItemText>My Profile</ListItemText>
+          <ListItemText>
+            <Link href="/seller/account">My Profile</Link>
+
+          </ListItemText>
         </MenuItem>
         <MenuItem>
           <ListItemIcon>
             <IconMail width={20} />
           </ListItemIcon>
-          <ListItemText>My Account</ListItemText>
+          <ListItemText>
+            <Link href="/seller/settings">Settings</Link>
+          </ListItemText>
         </MenuItem>
-        <MenuItem>
-          <ListItemIcon>
-            <IconListCheck width={20} />
-          </ListItemIcon>
-          <ListItemText>My Tasks</ListItemText>
-        </MenuItem>
+
         <Box mt={1} py={1} px={2}>
           <Button
-            href="/authentication/login"
+            href="/sign-in"
             variant="outlined"
             color="primary"
             component={Link}

@@ -1,17 +1,19 @@
-import React from 'react';
+'use client'
+import React, { useState } from 'react';
 import { Box, AppBar, Toolbar, styled, Stack, IconButton, Badge, Button } from '@mui/material';
 import PropTypes from 'prop-types';
 import Link from 'next/link';
 // components
 import Profile from './Profile';
 import { IconBellRinging, IconMenu } from '@tabler/icons-react';
+import Notifications from '@/sections/notifications/Notifications';
 
 interface ItemType {
   toggleMobileSidebar: (event: React.MouseEvent<HTMLElement>) => void;
 }
 
 const Header = ({ toggleMobileSidebar }: ItemType) => {
-
+  const [isBtnClicked, setIsBtnClicked] = useState(false)
   // const lgUp = useMediaQuery((theme) => theme.breakpoints.up('lg'));
   // const lgDown = useMediaQuery((theme) => theme.breakpoints.down('lg'));
 
@@ -30,6 +32,12 @@ const Header = ({ toggleMobileSidebar }: ItemType) => {
     color: theme.palette.text.secondary,
   }));
 
+
+  const toggleNotifcation = () => {
+    setIsBtnClicked(!isBtnClicked)
+
+    console.log('xll')
+  }
   return (
     <AppBarStyled position="sticky" color="default">
       <ToolbarStyled>
@@ -56,7 +64,7 @@ const Header = ({ toggleMobileSidebar }: ItemType) => {
           aria-haspopup="true"
         >
           <Badge variant="dot" color="primary">
-            <IconBellRinging size="21" stroke="1.5" />
+            <IconBellRinging size="21" onClick={toggleNotifcation} stroke="1.5" />
           </Badge>
 
         </IconButton>
@@ -66,6 +74,7 @@ const Header = ({ toggleMobileSidebar }: ItemType) => {
             Login
           </Button>
           <Profile />
+          <Notifications isBtnClicked={isBtnClicked} setIsBtnClicked={setIsBtnClicked} />
         </Stack>
       </ToolbarStyled>
     </AppBarStyled>

@@ -1,6 +1,6 @@
 'use client'
-import Button from '@/components/button/Button'
-import Input from '@/components/input/Input'
+import { Button } from '@/components/ui/button'
+import { Input } from '@/components/ui/input'
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
@@ -28,40 +28,36 @@ const SignUp = () => {
                     </Button>
                 </div>
 
-                <div className='flex items-center w-full px-10'>
+                <div className='flex items-center w-full px-5'>
                     <div className='h-[1px] w-full bg-gray-300'></div>
                     <span className='mx-4'>or</span>
                     <hr />
                     <div className='h-[1px] w-full bg-gray-300'></div>
                 </div>
 
-                <form action="">
+                <form action="" className='w-full p-5'>
                     <div className='flex items-center flex-col lg:flex-row'>
-                        <div className='flex flex-col mr-0 lg:mr-4'>
+                        <div className='flex flex-col mr-0 lg:mr-4 w-full'>
                             <label className='my-2 text-sm font-semibold' htmlFor="first name">First name</label>
-                            <Input type="text"
-                                id="first name" onChange={undefined} value={''} updateStyle={'my-2'} placeholder={''} />
+                            <Input className='p-3' placeholder={''} />
                         </div>
-                        <div className='flex flex-col'>
+                        <div className='flex flex-col w-full'>
                             <label className='my-2 text-sm font-semibold' htmlFor="last name">Last name</label>
-                            <Input type="text"
-                                id="last name" onChange={undefined} value={''} updateStyle={'my-2'} placeholder={''} /></div>
+                            <Input className='p-3' placeholder={''} /></div>
                     </div>
                     <div className='flex flex-col'>
                         <label className='my-2 text-sm font-semibold' htmlFor="email">Email address</label>
-                        <Input type="text"
-                            id="email" onChange={undefined} value={''} updateStyle={'my-2'} placeholder={''} /></div>
+                        <Input className='p-3' placeholder={''} /></div>
                     <div className='flex flex-col'>
                         <label className='my-2 text-sm font-semibold' htmlFor="password">
                             Password
                         </label>
                         <div className='relative w-full'>
-                            <Input type="text"
-                                id="password" onChange={undefined} value={''} updateStyle={'my-2 w-full'} placeholder={''} />
+                            <Input className='p-3' placeholder={''} />
                             <i className="fa fa-eye absolute right-5 top-5" aria-hidden="true"></i>
                         </div>
                     </div>
-                    <Button onClick={registerUserThroughEmailAndPassword} updateStyle='bg-[#7D76F3] w-full my-5 text-white text-sm'>
+                    <Button onClick={registerUserThroughEmailAndPassword} variant={'purple'} className='w-full my-5 text-white text-sm'>
                         <span>Continue</span>
                     </Button>
                 </form>

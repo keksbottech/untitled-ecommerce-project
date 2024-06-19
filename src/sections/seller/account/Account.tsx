@@ -7,8 +7,8 @@ import React from 'react'
 
 const Account = () => {
     return (
-        <section className='flex flex-items justify-between mt-10'>
-            <Card className='w-[40%] flex flex-col items-center justify-center'>
+        <section className='flex flex-col xl:flex-row flex-items justify-between mt-10'>
+            <Card className='xl:w-[40%] w-full flex flex-col items-center justify-center'>
                 <CardHeader>
                     <CardTitle>
                         <Image src="/images/profile/user-1.jpg" alt="image" width={200} height={200} className='rounded-full' />
@@ -25,7 +25,7 @@ const Account = () => {
                 </CardFooter>
             </Card>
 
-            <Card className='w-[60%] mx-10'>
+            <Card className='w-full xl:w-[60%] mt-10 xl:mt-0 mx-0 xl:mx-10'>
                 <CardHeader>
                     <CardTitle>Profile</CardTitle>
                     <CardDescription>The information can be edited</CardDescription>
