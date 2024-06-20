@@ -13,7 +13,6 @@ import RecentTransactions from '@/components/(dashboard layout)/components/dashb
 import SalesOverview from '@/components/(dashboard layout)/components/dashboard/SalesOverview';
 import YearlyBreakup from '@/components/(dashboard layout)/components/dashboard/YearlyBreakup';
 import Header from '@/components/(dashboard layout)/layout/header/Header';
-import Sidebar from '@/components/(dashboard layout)/layout/sidebar/Sidebar';
 import { Grid, Box } from '@mui/material';
 import { MouseEvent } from 'react';
 

@@ -1,7 +1,7 @@
 'use client'
-import Button from '@/components/button/Button'
 import Container from '@/components/container/Container'
-import Input from '@/components/input/Input'
+import { Button } from '@/components/ui/button'
+import { Input } from '@/components/ui/input'
 import React from 'react'
 
 const AccountSetup = () => {
@@ -19,7 +19,7 @@ const AccountSetup = () => {
                                 <p className='text-sm mt-1'>I want to open a {"seller's"} account to reach out to millions of customers </p>
                             </div>
                         </div>
-                        <Input type='radio' onChange={undefined} value={''} updateStyle={''} placeholder={''} id={''} />
+                        <Input type='radio' onChange={undefined} value={''} className={''} placeholder={''} id={''} />
 
                     </div>
 
@@ -33,11 +33,11 @@ const AccountSetup = () => {
                                 mt-1   text-sm'>I want to open a {"consumer's"} account to find and buy goods based on my taste </p>
                             </div>
                         </div>
-                        <Input type='radio' onChange={undefined} value={''} updateStyle={''} placeholder={''} id={''} />
+                        <Input type='radio' onChange={undefined} value={''} className={''} placeholder={''} id={''} />
 
                     </div>
                 </div>
-                <Button updateStyle="mt-5 px-20 bg-primary text-white py-3" onClick={() => null}>
+                <Button className="mt-5 px-20 bg-primary text-white py-3" onClick={() => null}>
                     <span>Create account</span>
                 </Button>
             </Container>

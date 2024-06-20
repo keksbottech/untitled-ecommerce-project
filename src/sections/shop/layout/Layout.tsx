@@ -5,9 +5,9 @@ import CssBaseline from "@mui/material/CssBaseline";
 import { baselightTheme } from '@/utils/theme/DefaultColors';
 import Header from '@/components/(dashboard layout)/layout/header/Header';
 import Notifications from '@/sections/notifications/Notifications';
-import Sidebar from '@/components/(dashboard layout)/layout/sidebar/seller/SellerSidebar';
+import Sidebar from '@/components/(dashboard layout)/layout/sidebar/shop/ShopSidebar';
 
-const SellerLayout = ({ children }: { children: ReactNode }) => {
+const ShopLayout = ({ children }: { children: ReactNode }) => {
     const [isNavbarToggled, setIsNavbarToggled] = useState(false)
 
     const toggleNavbarOpenAndClose = () => {
@@ -33,4 +33,4 @@ const SellerLayout = ({ children }: { children: ReactNode }) => {
     )
 }
 
-export default SellerLayout
+export default ShopLayout
